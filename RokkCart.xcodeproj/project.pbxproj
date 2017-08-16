@@ -20,6 +20,7 @@
 		D993140B1F449D2300F2F14D /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993140A1F449D2300F2F14D /* CartManager.swift */; };
 		D993140E1F44A67400F2F14D /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993140C1F44A67400F2F14D /* CartTableViewCell.swift */; };
 		D993140F1F44A67400F2F14D /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993140D1F44A67400F2F14D /* CartTableViewCell.xib */; };
+		D99314111F44A92400F2F14D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99314101F44A92400F2F14D /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D993140A1F449D2300F2F14D /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		D993140C1F44A67400F2F14D /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		D993140D1F44A67400F2F14D /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		D99314101F44A92400F2F14D /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F8FEA82F72BC35A70B473EAD /* Pods_RokkCart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RokkCart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				D99314001F448B4C00F2F14D /* Resource */,
 				D99313EE1F448B0900F2F14D /* AppDelegate.swift */,
 				D99313F01F448B0900F2F14D /* ProductsViewController.swift */,
+				D99314101F44A92400F2F14D /* CartViewController.swift */,
 				D993140A1F449D2300F2F14D /* CartManager.swift */,
 				D99314021F448C5900F2F14D /* ProductCell.swift */,
 				D99314031F448C5900F2F14D /* ProductCell.xib */,
@@ -255,6 +258,7 @@
 			files = (
 				D993140B1F449D2300F2F14D /* CartManager.swift in Sources */,
 				D99314041F448C5900F2F14D /* ProductCell.swift in Sources */,
+				D99314111F44A92400F2F14D /* CartViewController.swift in Sources */,
 				D99314091F4492E600F2F14D /* Product.swift in Sources */,
 				D993140E1F44A67400F2F14D /* CartTableViewCell.swift in Sources */,
 				D99313F11F448B0900F2F14D /* ProductsViewController.swift in Sources */,

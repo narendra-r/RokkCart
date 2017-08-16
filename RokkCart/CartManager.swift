@@ -39,4 +39,27 @@ class CartManager{
         }
         return count
     }
+    var getCartPrice: Double {
+        var count = 0.0
+        _ = cartItems.map { (item) -> Void in
+            count = count + (Double(item.order_quantity) * (item.product?.price ?? 0.0))
+        }
+        return count
+    }
+    
+    func removeItemFromCart(item: CartItem){
+        item.product?.availableCount = (item.product?.availableCount ?? 0) + item.order_quantity
+        cartItems = cartItems.filter({$0.product?.productId != item.product?.productId})
+    }
+    
+    func decreseProductQuantity(item: CartItem){
+        item.order_quantity -= 1
+        item.product?.availableCount = (item.product?.availableCount ?? 0) + 1
+    }
+    
+    func increseProductQuantity(item: CartItem){
+        item.order_quantity += 1
+        item.product?.availableCount = (item.product?.availableCount ?? 0) - 1
+    }
+    
 }

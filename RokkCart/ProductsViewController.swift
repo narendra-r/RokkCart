@@ -8,12 +8,14 @@
 
 import UIKit
 
+
 class ProductsViewController: UIViewController {
 
     
     @IBOutlet weak var cartButton: UIButton!
     var products:[Product] = []
     
+    @IBOutlet weak var totalCartAmount: UILabel!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,11 @@ class ProductsViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! CartViewController
+        destination.delegate = self
+    }
+    
     func loadJSON() -> [String:Any]?{
         if let path = Bundle.main.path(forResource: "products", ofType: "json") {
             do {
@@ -70,6 +77,7 @@ class ProductsViewController: UIViewController {
     
     func updateCartCount(){
         cartButton.setTitle("\(CartManager.shared.getCartCount)", for: .normal)
+        totalCartAmount.text = "Total Cart amount: \(CartManager.shared.getCartPrice)"
     }
 }
 
@@ -96,6 +104,13 @@ extension ProductsViewController: ProductCellDelgate{
         product.availableCount = (product.availableCount ?? 0) - 1
         tableView.reloadData()
         updateCartCount()
+    }
+}
+
+extension ProductsViewController: CardUpdationsDelegate{
+    func didUpdateCart() {
+        updateCartCount()
+        tableView.reloadData()
     }
 }
 

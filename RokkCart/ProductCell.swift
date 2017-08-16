@@ -18,7 +18,8 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var itemsReaminLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     var delegate: ProductCellDelgate?
-    
+    static let ReuseCellIdentifier = "ProductCell"
+
     var product: Product? {
         didSet{
             itemsReaminLabel.text = "Available: \(product?.availableCount ?? 0)"
@@ -30,7 +31,6 @@ class ProductCell: UITableViewCell {
             }
         }
     }
-    static let ReuseCellIdentifier = "ProductCell"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
