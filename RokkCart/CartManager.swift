@@ -8,11 +8,6 @@
 
 import Foundation
 
-class CartItem{
-    var product: Product?
-    var order_quantity: Int = 0
-}
-
 class CartManager{
     static let shared = CartManager()
     private init() {}

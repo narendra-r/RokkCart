@@ -21,6 +21,7 @@
 		D993140E1F44A67400F2F14D /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993140C1F44A67400F2F14D /* CartTableViewCell.swift */; };
 		D993140F1F44A67400F2F14D /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993140D1F44A67400F2F14D /* CartTableViewCell.xib */; };
 		D99314111F44A92400F2F14D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99314101F44A92400F2F14D /* CartViewController.swift */; };
+		D99314131F44B72D00F2F14D /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99314121F44B72D00F2F14D /* CartItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D993140C1F44A67400F2F14D /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		D993140D1F44A67400F2F14D /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		D99314101F44A92400F2F14D /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		D99314121F44B72D00F2F14D /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		F8FEA82F72BC35A70B473EAD /* Pods_RokkCart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RokkCart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,19 +96,16 @@
 		D99313ED1F448B0900F2F14D /* RokkCart */ = {
 			isa = PBXGroup;
 			children = (
+				D99314141F44B75600F2F14D /* Views */,
 				D99314071F4492AB00F2F14D /* Models */,
 				D99314001F448B4C00F2F14D /* Resource */,
 				D99313EE1F448B0900F2F14D /* AppDelegate.swift */,
+				D993140A1F449D2300F2F14D /* CartManager.swift */,
 				D99313F01F448B0900F2F14D /* ProductsViewController.swift */,
 				D99314101F44A92400F2F14D /* CartViewController.swift */,
-				D993140A1F449D2300F2F14D /* CartManager.swift */,
 				D99314021F448C5900F2F14D /* ProductCell.swift */,
-				D99314031F448C5900F2F14D /* ProductCell.xib */,
 				D993140C1F44A67400F2F14D /* CartTableViewCell.swift */,
-				D993140D1F44A67400F2F14D /* CartTableViewCell.xib */,
-				D99313F21F448B0900F2F14D /* Main.storyboard */,
 				D99313F51F448B0900F2F14D /* Assets.xcassets */,
-				D99313F71F448B0900F2F14D /* LaunchScreen.storyboard */,
 				D99313FA1F448B0900F2F14D /* Info.plist */,
 			);
 			path = RokkCart;
@@ -124,8 +123,20 @@
 			isa = PBXGroup;
 			children = (
 				D99314081F4492E600F2F14D /* Product.swift */,
+				D99314121F44B72D00F2F14D /* CartItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D99314141F44B75600F2F14D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D99314031F448C5900F2F14D /* ProductCell.xib */,
+				D993140D1F44A67400F2F14D /* CartTableViewCell.xib */,
+				D99313F21F448B0900F2F14D /* Main.storyboard */,
+				D99313F71F448B0900F2F14D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				D993140B1F449D2300F2F14D /* CartManager.swift in Sources */,
 				D99314041F448C5900F2F14D /* ProductCell.swift in Sources */,
+				D99314131F44B72D00F2F14D /* CartItem.swift in Sources */,
 				D99314111F44A92400F2F14D /* CartViewController.swift in Sources */,
 				D99314091F4492E600F2F14D /* Product.swift in Sources */,
 				D993140E1F44A67400F2F14D /* CartTableViewCell.swift in Sources */,
